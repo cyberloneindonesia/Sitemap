@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@JerryZhonathan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="profile-info">
+            <img src="./assets/sanskar-profile.png" alt="Profile" class="profile-pic" />
+            <h2>@JerryZhonathan</h2>
+            <p class="quote" id="quote"></p> <!-- Teks kutipan ditempatkan di sini -->
+        </div>
+
+        <div class="links">
+            <a class="linkBtn" href="http://akudisini.42web.io/" target="_blank">Portfolio <i class="fas fa-folder"></i></a>
+            <a class="linkBtn" href="https://id.linkedin.com/in/jerry-zhonathan-167808241?trk=people-guest_people_search-card" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
+            <a class="linkBtn" href="https://github.com/yukinime" target="_blank">Github <i class="fab fa-github"></i></a>
+            <a class="linkBtn" href="https://cyberloneindonesia.netlify.app/" target="_blank">Website <i class="fas fa-globe"></i></a>
+            <a class="linkBtn" href="https://cyberloneawareness.blogspot.com/" target="_blank">Blogger <i class="fab fa-blogger-b"></i></a>
+            <a class="linkBtn" href="https://www.youtube.com/@cyberloneindonesia" target="_blank">Youtube <i class="fab fa-youtube"></i></a>
+            <a class="linkBtn" href="https://wa.link/lpk0un" target="_blank">Send Message <i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <script>
+        const text = "Never want to stop learning.";
+        let index = 0;
+        let isAdding = true;
+
+        function typeText() {
+            if (isAdding) {
+                if (index < text.length) {
+                    document.getElementById("quote").textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 100);
+                } else {
+                    isAdding = false;
+                    setTimeout(typeText, 2000);
+                }
+            } else {
+                if (index > 0) {
+                    document.getElementById("quote").textContent = text.substring(0, index - 1);
+                    index--;
+                    setTimeout(typeText, 50);
+                } else {
+                    isAdding = true;
+                    setTimeout(typeText, 500);
+                }
+            }
+        }
+
+        window.onload = typeText; // Mulai saat halaman dimuat
+    </script>
+</body>
+
+</html>

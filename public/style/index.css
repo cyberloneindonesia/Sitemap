@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-html, body {
-    height: 100%; /* Memastikan html dan body mengisi seluruh tinggi */
-    margin: 0; /* Menghilangkan margin default */
-}
-
 body {
     background-image: url('../assets/background.jpg');
     background-size: cover; /* Gambar mengisi seluruh area */

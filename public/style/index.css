@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+html, body {
+    height: 100%; /* Memastikan html dan body mengisi seluruh tinggi */
+    margin: 0; /* Menghilangkan margin default */
+}
+
 body {
     background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    background-size: cover; /* Gambar mengisi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    color: white; /* Warna teks */
+    font-family: 'Montserrat', sans-serif; /* Font */
+    display: flex; /* Memungkinkan penggunaan flexbox */
+    align-items: center; /* Vertikal tengah */
+    justify-content: center; /* Horizontal tengah */
+    min-height: 100vh; /* Pastikan tinggi minimal 100% viewport */
 }
 
 .container {
